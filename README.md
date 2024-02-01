@@ -32,6 +32,7 @@ The project aims to create an automated data ingestion and analysis pipeline tha
 
  ## Project files
  Please visit the GitHub repository to view all project files.
+
  ```dds_v1.py```: Automates data retrieval from the Shopify API and saves the fetched data in JSON format.
 
 ## Prerequisites
