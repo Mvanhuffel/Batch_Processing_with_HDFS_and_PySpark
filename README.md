@@ -12,7 +12,7 @@ The project aims to create an automated data ingestion and analysis pipeline tha
 ## Project Evolution: Methodology
 
 ### **1. Shopify API Setup** (Completed on 2024-01-31)
-- #### <ins>Development storefront and custom app creation</ins>: Created a Shopify development storefront to simulate live e-commerce environment. Developed a custom application to enable authorized access to the storefront's data, with appropriate permission settings in place. 
+- **Development storefront and custom app creation**: Created a Shopify development storefront to simulate live e-commerce environment. Developed a custom application to enable authorized access to the storefront's data, with appropriate permission settings in place. 
 - <ins>API access token generation</ins>: Generated an admin API access token to serve as an authentication mechanism for API requests for data retrieval. 
 
 ### **2. Initial Python Script Design** (Completed on 2024-01-31)
