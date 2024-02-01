@@ -9,25 +9,25 @@ The project aims to create an automated data ingestion and analysis pipeline tha
 - **Process Data with Apache PySpark**: Implement ELT (Extract, Load, Transform) by extracting data from HDFS, loading it into PySpark, and performing necessary transformation operations (e.g., aggregation, filtering, joining).
 
 ## Methodology
-### <ins>1. Shopify API Setup</ins> (Completed on 2024-01-31)
+### 1.<ins>Shopify API Setup</ins> (Completed on 2024-01-31)
 - **Development storefront and custom app creation**: Created a Shopify development storefront to simulate live e-commerce environment. Developed a custom application to enable authorized access to the storefront's data, with appropriate permission settings in place. 
 - **API access token generation**: Generated an admin API access token to serve as an authentication mechanism for API requests for data retrieval. 
 
-### <ins>2. Initial Python Script Design</ins> (Completed on 2024-01-31)
+### 2.<ins>Initial Python Script Design</ins> (Completed on 2024-01-31)
 - **Script configuration**: Configured the Python script using the admin API access token to access the Shopify store's data, including store name and product information. Initially set the endpoint to product.json, but the script is designed for future enhancements to fetch different data types.
 - **Data retrieval**: Programmed the script to fetch product information, generate a unique timestamp for each data retrieval session, and construct filenames incorporating these timestamps. Stored the retrieved data in JSON format within a 'data' folder. 
 
-### <ins>3. Version Control Implementation</ins> (Completed on 2024-01-31)
+### 3.<ins>Version Control Implementation</ins> (Completed on 2024-01-31)
 - **Git repository initialization**: Initialized a Git repository within the project directory to enable version control and allow for the tracking and management of changes. 
 - **Configuration file exclusion**: Created a .gitignore file to exclude the config file storing the access token password from version control. 
 
-### <ins>4. Script Execution Automation</ins> (Completed on 2024-02-01)
+### 4.<ins>Script Execution Automation</ins> (Completed on 2024-02-01)
 - **Task scheduling**: Employed a task scheduler to automate the execution of the Python script at predetermined intervals (once per week).
 
-### <ins>5. Logging Integration</ins> (Completed on 2024-02-01) 
+### 5.<ins>Logging Integration</ins> (Completed on 2024-02-01) 
 - **Logging**: Updated the Python script to include logging capabilities to capture records of operational processes, including timestamps and messages related to the success or failure of data ingestion tasks. 
 
-### <ins>6. HDFS Setup</ins> (In Progress)
+### 6.<ins>HDFS Setup</ins> (In Progress)
 - **Infrastructure development**: Working on establishing a Hadoop Distributed File System (HDFS) for the storage of ingested data.
 
  ## Project files
