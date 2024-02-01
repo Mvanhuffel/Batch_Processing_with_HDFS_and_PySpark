@@ -1,39 +1,37 @@
 # Batch Processing with HDFS and Apache PySpark
 
-The project aims to create an automated data ingestion and analysis pipeline that fetches data from an open-source API, stores it in HDFS, and processes it with PySpark for further analysis and insights.
+The project aims to create an automated data ingestion and analysis pipeline that fetches data from a third-party API, stores it in HDFS, and processes it with PySpark for further analysis and insights.
 
 ## Objectives
 
-**1. Choose an Open Source API:**
-- Find an open-source API where you can regularly fetch data.
+- **Choose a Third-Party API**: Find and select a third-party API for data ingestion.
+- **Set Up Batch Data Ingestion**: Develop a script for regular data fetching from the chosen API in scheduled batches.
+- **Save Data Using HDFS**: Store the collected data using HDFS (Hadoop Distributed File System).
+- **Process Data with Apache PySpark**: Implement ELT (Extract, Load, Transform) by extracting data from HDFS, loading it into PySpark, and performing necessary transformation operations (e.g., aggregation, filtering, joining).
 
-**2. Set Up Batch Data Ingestion:**
-- Write a script to fetch data from the chosen API at regular intervals, where data is collected in batches at scheduled times.
+## Project Evolution: Methodology
 
-**3. Save Data Using HDFS (Hadoop Distributed File System):**
-- Once fetched, store it using HDFS.
+**1. Shopify API Setup** (Completed on 2024-01-31)
+- **Development storefront and custom app creation**: Shopify development storefront was created to simulate live e-commerce environment. A custom application was developed to enable authorized access to the storefront's data, with appropriate permission settings in place. 
+- **API access token generation**: An admin API access token was generated, serving as an authentication mechanism for API requests used for data retrieval. 
 
-**4. Process Data with Apache PySpark (ELT with Batch Processing):**
-- Perform ELT (Extract, Load, Transform) - and extract data from HDFS, load it into PySpark, and then perform transformation operations (like aggregating, filtering, joining, etc.).
+**2. Initial Python Script Design** (Completed on 2024-01-31)
+- **Script configuration**: Using the admin API access token, the python script was configured to access the Shopify store's data, including store name and product information. The initial endpoint in the function was set to `product.json`, however additional modifications can be made in the future to create a more generic function to fetch different types of data.
+- **Data retrieval**: The script was programmed to fetch product information, generate a unique timestamp for each data retrieval session, and construct filenames incorporating these timestamps. The retrieved data was then stored in JSON format within a 'data' folder. 
 
-## Project Evolution
+**3. Version Control Implementation** (Completed on 2024-01-31)
+- **Git repository initialization**: A Git repo was initialized within the project directory to enable version control, and allow for tracking and management of changes. 
+- **Configuration file exclusion**: A `.gitignore` file was created to exclude a config file which stored the access token password. 
 
-**1. Shopify API Setup (Completed)**
+**4. Script Execution Automation** (Completed on 2024-02-01)
+- **Task scheduling**: Employed a task scheduler to automate the execution of the python script at predetermined intervals (once per week). 
 
-- We **created** a Shopify development storefront to generate fake data. 
-- A custom app **was created** to provide authorization for accessing the store's data, with permissions set accordingly.
-- We **received** an Admin API access token, which is required for authenticated requests to the Shopify API.
-- This enabled us to **use** an access token for authentication during API requests, allowing us to **fetch** the fake data.
+**5. Logging Integration** (Completed on 2024-02-01) 
+- **Logging**: Updated the python script to include logging capabilities in order to capture records of operational processes, including timestamps and messages related to the success or failure of data ingestion tasks. 
 
-**2. Initial Python Script  (In Progress)**
-
-- The initial python script accomplishes several tasks:
-	- It **sets up** access to the Shopify store's data using an access token and store name.
-	- It **fetches** information about products from the store.
-	- It **gets** the current date and time and **uses** it to create a unique timestamp.
-	- It **constructs** a filename that includes the timestamp. 
-	- It **saves** the fetched product data into a JSON file, which **is stored** in the 'data' folder in the project's directory.
+**6. HDFS Setup** (In Progress)
+- **Infrastructure development**: Attempting to establish a Hadoop Distributed File System (HDFS) for storage of the ingested data. 
 
  ## Project files
-
- ```dds_v1.py```: Automates data retrieval from an Shopify API, saving the fetched data in JSON format.
+ 
+ ```dds_v1.py```: Automates data retrieval from Shopify API, saving the fetched data in JSON format.
