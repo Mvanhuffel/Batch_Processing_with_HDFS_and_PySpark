@@ -12,16 +12,16 @@ The project aims to create an automated data ingestion and analysis pipeline tha
 ## Project Evolution: Methodology
 
 ### **1. Shopify API Setup** (Completed on 2024-01-31)
-- **Development storefront and custom app creation**: Created a Shopify development storefront to simulate live e-commerce environment. Developed a custom application to enable authorized access to the storefront's data, with appropriate permission settings in place. 
-- **API access token generation**: Generated an admin API access token to serve as an authentication mechanism for API requests for data retrieval. 
+- #### **Development storefront and custom app creation**: Created a Shopify development storefront to simulate live e-commerce environment. Developed a custom application to enable authorized access to the storefront's data, with appropriate permission settings in place. 
+- #### **API access token generation**: Generated an admin API access token to serve as an authentication mechanism for API requests for data retrieval. 
 
 ### **2. Initial Python Script Design** (Completed on 2024-01-31)
-- **Script configuration**: Configured the Python script using the admin API access token to access the Shopify store's data, including store name and product information. Initially set the endpoint to product.json, but the script is designed for future enhancements to fetch different data types.
-- **Data retrieval**: Programmed the script to fetch product information, generate a unique timestamp for each data retrieval session, and construct filenames incorporating these timestamps. Stored the retrieved data in JSON format within a 'data' folder. 
+- #### **Script configuration**: Configured the Python script using the admin API access token to access the Shopify store's data, including store name and product information. Initially set the endpoint to product.json, but the script is designed for future enhancements to fetch different data types.
+- #### **Data retrieval**: Programmed the script to fetch product information, generate a unique timestamp for each data retrieval session, and construct filenames incorporating these timestamps. Stored the retrieved data in JSON format within a 'data' folder. 
 
 ### **3. Version Control Implementation** (Completed on 2024-01-31)
-- **Git repository initialization**: Initialized a Git repository within the project directory to enable version control and allow for the tracking and management of changes. 
-- **Configuration file exclusion**: Created a .gitignore file to exclude the config file storing the access token password from version control. 
+- #### **Git repository initialization**: Initialized a Git repository within the project directory to enable version control and allow for the tracking and management of changes. 
+- #### **Configuration file exclusion**: Created a .gitignore file to exclude the config file storing the access token password from version control. 
 
 ### **4. Script Execution Automation** (Completed on 2024-02-01)
 - **Task scheduling**: Employed a task scheduler to automate the execution of the Python script at predetermined intervals (once per week).
